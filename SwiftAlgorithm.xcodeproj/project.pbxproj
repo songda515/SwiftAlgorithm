@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B1599B4E2678A1D600201F3D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B4D2678A1D600201F3D /* main.swift */; };
+		B1599B5C2678A2E500201F3D /* programmers3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B5A2678A2E500201F3D /* programmers3.swift */; };
+		B1599B5D2678A2E500201F3D /* programmers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B5B2678A2E500201F3D /* programmers1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		B1599B4A2678A1D600201F3D /* SwiftAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1599B4D2678A1D600201F3D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B1599B5A2678A2E500201F3D /* programmers3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = programmers3.swift; sourceTree = "<group>"; };
+		B1599B5B2678A2E500201F3D /* programmers1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = programmers1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		B1599B412678A1D600201F3D = {
 			isa = PBXGroup;
 			children = (
+				B1599B582678A2C900201F3D /* 스택큐 */,
 				B1599B4C2678A1D600201F3D /* SwiftAlgorithm */,
 				B1599B4B2678A1D600201F3D /* Products */,
 			);
@@ -60,6 +65,16 @@
 				B1599B4D2678A1D600201F3D /* main.swift */,
 			);
 			path = SwiftAlgorithm;
+			sourceTree = "<group>";
+		};
+		B1599B582678A2C900201F3D /* 스택큐 */ = {
+			isa = PBXGroup;
+			children = (
+				B1599B5B2678A2E500201F3D /* programmers1.swift */,
+				B1599B5A2678A2E500201F3D /* programmers3.swift */,
+			);
+			name = "스택큐";
+			path = "스택큐";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1599B4E2678A1D600201F3D /* main.swift in Sources */,
+				B1599B5D2678A2E500201F3D /* programmers1.swift in Sources */,
+				B1599B5C2678A2E500201F3D /* programmers3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
