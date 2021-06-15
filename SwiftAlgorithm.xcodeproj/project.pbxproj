@@ -11,6 +11,7 @@
 		B1599B5C2678A2E500201F3D /* programmers3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B5A2678A2E500201F3D /* programmers3.swift */; };
 		B1599B5D2678A2E500201F3D /* programmers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B5B2678A2E500201F3D /* programmers1.swift */; };
 		B1599B602678A36A00201F3D /* programmers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B5F2678A36A00201F3D /* programmers2.swift */; };
+		B1599B652678B08F00201F3D /* programmers6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B642678B08F00201F3D /* programmers6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		B1599B5A2678A2E500201F3D /* programmers3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = programmers3.swift; sourceTree = "<group>"; };
 		B1599B5B2678A2E500201F3D /* programmers1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = programmers1.swift; sourceTree = "<group>"; };
 		B1599B5F2678A36A00201F3D /* programmers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = programmers2.swift; path = "스택큐/programmers2.swift"; sourceTree = SOURCE_ROOT; };
+		B1599B642678B08F00201F3D /* programmers6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programmers6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		B1599B412678A1D600201F3D = {
 			isa = PBXGroup;
 			children = (
+				B1599B632678B08100201F3D /* 완전탐색 */,
 				B1599B582678A2C900201F3D /* 스택큐 */,
 				B1599B4C2678A1D600201F3D /* SwiftAlgorithm */,
 				B1599B4B2678A1D600201F3D /* Products */,
@@ -78,6 +81,15 @@
 			);
 			name = "스택큐";
 			path = "스택큐";
+			sourceTree = "<group>";
+		};
+		B1599B632678B08100201F3D /* 완전탐색 */ = {
+			isa = PBXGroup;
+			children = (
+				B1599B642678B08F00201F3D /* programmers6.swift */,
+			);
+			name = "완전탐색";
+			path = "완전탐색";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1599B652678B08F00201F3D /* programmers6.swift in Sources */,
 				B1599B4E2678A1D600201F3D /* main.swift in Sources */,
 				B1599B5D2678A2E500201F3D /* programmers1.swift in Sources */,
 				B1599B602678A36A00201F3D /* programmers2.swift in Sources */,
