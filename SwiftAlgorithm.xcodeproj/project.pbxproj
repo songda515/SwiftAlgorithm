@@ -16,6 +16,7 @@
 		B1599B6F2678B6B900201F3D /* 완전탐색_모의고사.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1599B6E2678B6B900201F3D /* 완전탐색_모의고사.swift */; };
 		B17CD11E26847139005A6614 /* 정렬_K번째수.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17CD11D26847139005A6614 /* 정렬_K번째수.swift */; };
 		B17CD12026847469005A6614 /* 정렬_가장큰수.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17CD11F26847469005A6614 /* 정렬_가장큰수.swift */; };
+		B17CD12226847D90005A6614 /* 정렬_H-Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17CD12126847D90005A6614 /* 정렬_H-Index.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		B1599B6E2678B6B900201F3D /* 완전탐색_모의고사.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "완전탐색_모의고사.swift"; sourceTree = "<group>"; };
 		B17CD11D26847139005A6614 /* 정렬_K번째수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "정렬_K번째수.swift"; sourceTree = "<group>"; };
 		B17CD11F26847469005A6614 /* 정렬_가장큰수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "정렬_가장큰수.swift"; sourceTree = "<group>"; };
+		B17CD12126847D90005A6614 /* 정렬_H-Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "정렬_H-Index.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				B17CD11D26847139005A6614 /* 정렬_K번째수.swift */,
 				B17CD11F26847469005A6614 /* 정렬_가장큰수.swift */,
+				B17CD12126847D90005A6614 /* 정렬_H-Index.swift */,
 			);
 			name = "정렬";
 			path = "정렬";
@@ -179,6 +182,7 @@
 				B1599B6F2678B6B900201F3D /* 완전탐색_모의고사.swift in Sources */,
 				B1599B5C2678A2E500201F3D /* 스택큐_다리를지나는트럭.swift in Sources */,
 				B17CD11E26847139005A6614 /* 정렬_K번째수.swift in Sources */,
+				B17CD12226847D90005A6614 /* 정렬_H-Index.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
