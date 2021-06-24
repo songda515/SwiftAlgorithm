@@ -15,6 +15,8 @@
 - [스터디 3주차 내용 정리](https://jellysong.tistory.com/95?category=845313)
 - [컬렉션 타입의 프로토콜 - IteratorProtocol, Sequence, Collection](https://jellysong.tistory.com/94)
 - [스터디 9주차 Programmers 스택/큐 문제풀이](https://jellysong.tistory.com/101) [[코드]](https://github.com/songda515/SwiftAlgorithm/tree/main/스택큐)
+- 스터디 9주차 Programmers 완전탐색 [[코드]](https://github.com/songda515/SwiftAlgorithm/tree/main/완전탐색)
+
 
 ### 4. 정렬 알고리즘
 - [스터디 4주차 내용 정리]()
