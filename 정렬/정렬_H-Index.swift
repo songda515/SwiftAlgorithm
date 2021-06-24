@@ -13,7 +13,7 @@ func 정렬_Hindex() {
     func solution1(_ citations:[Int]) -> Int {
         
         var hIndex = 0
-        while hIndex <= citations.max()! {
+        while hIndex <= citations.count {
             let count = citations.filter { $0 >= hIndex }.count
             if count < hIndex { break }
             hIndex += 1
