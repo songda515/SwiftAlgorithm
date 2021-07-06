@@ -16,28 +16,33 @@ func 이분탐색_입국심사() {
      테스트케이스 6, 9 번에서 다음과 같은 상황이 나타난다.
     */
     
-    func countPerson(_ time: Int64, _ times: [Int]) -> Int64 {
-        var count: Int64 = 0
-        times.forEach {
-            count += time / Int64($0)
+    func countPerson(_ times: [Int], _ totalTime: Int) -> Int {
+        // 총 걸리는 시간 / 한 명 심사하는데 걸리는 시간 = 심사할 수 있는 사람 수
+        var count = 0
+        for time in times {
+            count += totalTime / time
         }
         return count
     }
 
     func solution(_ n:Int, _ times:[Int]) -> Int64 {
-        var start: Int64 = 1
-        var end: Int64 = Int64(times.max()! * n)
-        var answer: Int64 = Int64.max
+        
+        var start = 1
+        var end = times.max()! * n
+        var answer: Int64 = 0
+        
         while start <= end {
-            let mid: Int64 = (start + end) / 2
-            let count: Int64 = countPerson(mid, times)
-            if count >= n { // n명을 검사했더라도, 더 적은 시간을 소요할수도 있음
-                answer = mid
+            let mid = (start + end) / 2
+            if countPerson(times, mid) >= n {
+                // n명을 검사했더라도, 더 적은 시간을 소요할수도 있음
                 end = mid - 1
-            } else if count < n { // n명을 검사하지 못한다면, 더 큰 시간을 소요해야함
+                answer = Int64(mid)
+            } else {
+                // n명을 검사하지 못한다면, 더 큰 시간을 소요해야함
                 start = mid + 1
             }
         }
+        
         return answer
     }
     
