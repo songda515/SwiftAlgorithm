@@ -10,36 +10,38 @@ import Foundation
 func 해시_베스트앨범() {
     
     func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
-        // [장르: (전체재생수, 플레이수:[식별자])]
-        typealias Play = (total: Int, ids: [Int:[Int]])
-        var musics = [String:Play]()
-        
+        var musicDict = [String: [Int]]()
+        var playDict = [String: (total: Int, each: [Int])]()
+
         for i in 0..<genres.count {
-            let key = genres[i], play = plays[i]
-            if musics.keys.contains(key) {
-                musics[key]!.total += play
-                if musics[key]!.ids.keys.contains(play) {
-                    musics[key]!.ids[play]!.append(i)
-                } else {
-                    musics[key]!.ids[play] = [i]
-                }
+            if playDict.keys.contains(genres[i]) {
+                playDict[genres[i]]!.total += plays[i]
+                playDict[genres[i]]!.each.append(plays[i])
             } else {
-                musics[key] = Play(total: play, ids: [play: [i]])
+                playDict[genres[i]] = (total: plays[i], each: [plays[i]])
+            }
+
+            let key = genres[i] + String(plays[i])
+            if musicDict.keys.contains(key) {
+                musicDict[key]!.append(i)
+            } else {
+                musicDict[key] = [i]
             }
         }
 
         var bestMusics = [Int]()
-        for (_, value) in musics.sorted(by: { $0.value.total > $1.value.total }) {
+        for (k, value) in playDict.sorted(by: { $0.value.total > $1.value.total }) {
             var count = 0
-            for (_, ids) in value.ids.sorted(by: {$0.key > $1.key}) {
-                for id in ids {
+            for play in value.each.sorted(by: >) {
+                let key = k + String(play)
+                for music in musicDict[key]!.sorted() {
                     guard count < 2 else { break }
-                    bestMusics.append(id)
+                    bestMusics.append(music)
                     count += 1
                 }
             }
         }
-        
+
         return bestMusics
     }
     
