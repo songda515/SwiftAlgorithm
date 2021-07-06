@@ -10,35 +10,31 @@ import Foundation
 func 해시_베스트앨범() {
     
     func solution(_ genres:[String], _ plays:[Int]) -> [Int] {
-        var genresDict = [String: Int]()
-        var musicDict = [String: [Int]]()
-        var playDict = [String: [Int]]()
-
+        // [장르: (전체재생수, 플레이수:[식별자])]
+        typealias Play = (total: Int, ids: [Int:[Int]])
+        var musics = [String:Play]()
+        
         for i in 0..<genres.count {
-            if genresDict.keys.contains(genres[i]) {
-                genresDict[genres[i]]! += plays[i]
-                playDict[genres[i]]!.append(plays[i])
+            let key = genres[i], play = plays[i]
+            if musics.keys.contains(key) {
+                musics[key]!.total += play
+                if musics[key]!.ids.keys.contains(play) {
+                    musics[key]!.ids[play]!.append(i)
+                } else {
+                    musics[key]!.ids[play] = [i]
+                }
             } else {
-                genresDict[genres[i]] = plays[i]
-                playDict[genres[i]] = [plays[i]]
-            }
-            
-            let key = genres[i] + String(plays[i])
-            if musicDict.keys.contains(key) {
-                musicDict[key]!.append(i)
-            } else {
-                musicDict[key] = [i]
+                musics[key] = Play(total: play, ids: [play: [i]])
             }
         }
-        
+
         var bestMusics = [Int]()
-        for (k, _) in genresDict.sorted(by: { $0.value > $1.value }) {
+        for (_, value) in musics.sorted(by: { $0.value.total > $1.value.total }) {
             var count = 0
-            for play in playDict[k]!.sorted(by: >) { // 2500, 600
-                let key = k + String(play)
-                for music in musicDict[key]!.sorted() {
-                    if count == 2 { break }
-                    bestMusics.append(music)
+            for (_, ids) in value.ids.sorted(by: {$0.key > $1.key}) {
+                for id in ids {
+                    guard count < 2 else { break }
+                    bestMusics.append(id)
                     count += 1
                 }
             }
@@ -47,8 +43,9 @@ func 해시_베스트앨범() {
         return bestMusics
     }
     
-    print(solution(["classic", "pop", "classic", "classic", "pop"], [500, 600, 500, 800, 2500]))//, [4, 1, 3, 0])
-    print(solution(["classic", "pop", "classic", "classic"], [200, 600, 500, 500]))
+    print(solution(["classic", "pop", "classic", "classic", "pop"], [500, 600, 150, 800, 2500])) // [4, 1, 3, 0]
+    print(solution(["classic", "pop", "classic", "classic", "pop"], [500, 600, 500, 800, 2500])) // [4, 1, 3, 0]
+    print(solution(["classic", "pop", "classic", "classic"], [200, 600, 500, 500])) // [2, 3, 1]
 }
 
 
