@@ -17,44 +17,36 @@ func 그래프탐색_여행경로() {
     // 주어진 경로는 중복될 수 있다.
     // 맨 마지막 목적지에서 출발하는 티켓은 없을 수도 있다.
     
-    func findCourse(_ ticketDict: inout [String:[String]], _ src: String, _ course: [String], _ n: Int) -> [String] {
+    func findCourse(_ tickets: inout [[String]], _ visited: inout [Bool],
+                    _ src: String, _ course: [String]) -> [String] {
         
-        ticketDict[src]!.sort()
-        for (i, dst) in ticketDict[src]!.enumerated() {
-            var newCourse = course
-            newCourse.append(dst)
-            
-            guard ticketDict.keys.contains(dst) else {
-                if course.count == n-1 { return newCourse }
-                continue
+        if course.count == tickets.count+1 {
+            return course
+        }
+        
+        for (index, ticket) in tickets.enumerated() {
+            if ticket[0] == src && visited[index] == false {
+                visited[index] = true
+                var newCourse = course
+                newCourse.append(ticket[1]) // add dst
+                let result = findCourse(&tickets, &visited, ticket[1], newCourse)
+                if !result.isEmpty { return result }
+                visited[index] = false
             }
-            guard !ticketDict[dst]!.isEmpty else {
-                if course.count == n-1 { return newCourse }
-                continue
-            }
-            // Go to next step(depth)
-            var newDict = ticketDict
-            newDict[src]!.remove(at: i)
-            let result = findCourse(&newDict, dst, newCourse, n)
-            if !result.isEmpty { return result }
         }
         return []
     }
     
     func solution(_ tickets:[[String]]) -> [String] {
         
-        var ticketDict = [String: [String]]() // key = "ICN", value = ["SFO", "ATL"]
+        // 티켓의 도착지에 따라 오름차순 정렬.
+        var tickets = tickets.sorted(by: { $0[1] < $1[1] })
         
-        tickets.forEach { ticket in
-            let src = ticket[0], dst = ticket[1]
-            if ticketDict.keys.contains(src) {
-                ticketDict[src]!.append(dst)
-            } else {
-                ticketDict[src] = [dst]
-            }
-        }
+        // 티켓을 사용했는지에 대해 visited 배열로 체크
+        var visited = Array(repeating: false, count: tickets.count)
         
-        return findCourse(&ticketDict, "ICN", ["ICN"], tickets.count+1)
+        // 티켓에 대해 DFS 수행 -> 가능한 경로를 반환한다.
+        return findCourse(&tickets, &visited, "ICN", ["ICN"])
     }
 
     // 기본 예제 1
@@ -68,11 +60,11 @@ func 그래프탐색_여행경로() {
     // 반례 1
     print(solution([["ICN", "BBB"],["ICN", "CCC"],["BBB", "CCC"],["CCC", "BBB"],["CCC", "ICN"]]))
     // ["ICN", "BBB", "CCC", "ICN", "CCC", "BBB"]
-    
+
     // 반례 2
     print(solution([["ICN", "SFO"], ["SFO", "ICN"], ["ICN", "SFO"], ["SFO", "QRE"]]))
     // ["ICN", "SFO", "ICN", "SFO", "QRE"]
-    
+
     // 반례 3
     print(solution([["ICN", "BOO"], ["ICN", "COO"], ["COO", "DOO"], ["DOO", "COO"], ["BOO", "DOO"], ["DOO", "BOO"], ["BOO", "ICN"], ["COO", "BOO"]]))
     // ["ICN", "BOO", "DOO", "BOO", "ICN", "COO", "DOO", "COO", "BOO"]))
