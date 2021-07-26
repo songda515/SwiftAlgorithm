@@ -29,6 +29,7 @@
 		B17CD12026847469005A6614 /* 정렬_가장큰수.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17CD11F26847469005A6614 /* 정렬_가장큰수.swift */; };
 		B17CD12226847D90005A6614 /* 정렬_H-Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17CD12126847D90005A6614 /* 정렬_H-Index.swift */; };
 		B1B1F2B626AE8C4A002A64C0 /* 그래프_가장먼노드.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1F2B526AE8C4A002A64C0 /* 그래프_가장먼노드.swift */; };
+		B1B1F2B826AE98B4002A64C0 /* 그래프_순위.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1F2B726AE98B4002A64C0 /* 그래프_순위.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		B17CD11F26847469005A6614 /* 정렬_가장큰수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "정렬_가장큰수.swift"; sourceTree = "<group>"; };
 		B17CD12126847D90005A6614 /* 정렬_H-Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "정렬_H-Index.swift"; sourceTree = "<group>"; };
 		B1B1F2B526AE8C4A002A64C0 /* 그래프_가장먼노드.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "그래프_가장먼노드.swift"; sourceTree = "<group>"; };
+		B1B1F2B726AE98B4002A64C0 /* 그래프_순위.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "그래프_순위.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B1F2B526AE8C4A002A64C0 /* 그래프_가장먼노드.swift */,
+				B1B1F2B726AE98B4002A64C0 /* 그래프_순위.swift */,
 			);
 			name = "그래프";
 			path = "그래프";
@@ -272,6 +275,7 @@
 				B14CA1AA26A56E8900AEAE2C /* 그래프탐색_여행경로.swift in Sources */,
 				B150765D26A842EE009F8479 /* 그래프탐색_타겟넘버.swift in Sources */,
 				B17CD11E26847139005A6614 /* 정렬_K번째수.swift in Sources */,
+				B1B1F2B826AE98B4002A64C0 /* 그래프_순위.swift in Sources */,
 				B15A5DEA26AA984D0062AF32 /* 완전탐색_BOJ10819.swift in Sources */,
 				B140420B268F00F900F1A4C5 /* 이분탐색_징검다리.swift in Sources */,
 				B124A82126A2AD0100728CD7 /* 힙_디스크컨트롤러.swift in Sources */,
