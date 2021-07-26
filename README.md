@@ -31,9 +31,11 @@
 
 ### 6. 고급 검색 메소드
 - [스터디 6주차 내용 정리 - Trie Tree](https://www.notion.so/jellysong/54627087fda54dee8c9e12d68c43fa6e)
+- [스터디 12주차 Programmers 힙 코드](https://github.com/songda515/SwiftAlgorithm/tree/main/힙)
 
 ### 7. 그래프 알고리즘
 - [스터디 7주차 내용 정리 - MST(Minimum Spanning Tree)](https://www.notion.so/jellysong/6b3673865efd4610930e21d4d9406cdd)
+- [스터디 13주차 Programmers 깊이/너비 우선 탐색(DFS/BFS) 문제풀이](https://jellysong.tistory.com/114) [[코드]](https://github.com/songda515/SwiftAlgorithm/tree/main/그래프탐색)
 
 ### 8. 알고리즘 성능과 효율성
 - [스터디 8주차 내용 정리 - 빅오표기법](https://www.notion.so/jellysong/2c384a724b9d430fb42602bc8f85d2e7)
