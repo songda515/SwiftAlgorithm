@@ -25,7 +25,7 @@
 - [스터디 10주차 Programmers 정렬 문제풀이](https://jellysong.tistory.com/104) [[코드]](https://github.com/songda515/SwiftAlgorithm/tree/main/정렬)
 
 ### 5. 트리 구조 기반의 알고리즘
-- [스터디 5주차 내용 정리](https://www.notion.so/jellysong/29d6b7a4952f4fce836179edee56edc1)
+- [스터디 5주차 내용 정리](https://jellysong.tistory.com/115)
 - [스터디 11주차 Programmers 이분 탐색 코드](https://github.com/songda515/SwiftAlgorithm/tree/main/이분탐색)
 - [스터디 11주차 Programmers 해시 코드](https://github.com/songda515/SwiftAlgorithm/tree/main/해시)
 
@@ -34,7 +34,7 @@
 - [스터디 12주차 Programmers 힙 코드](https://github.com/songda515/SwiftAlgorithm/tree/main/힙)
 
 ### 7. 그래프 알고리즘
-- [스터디 7주차 내용 정리 - MST(Minimum Spanning Tree)](https://www.notion.so/jellysong/6b3673865efd4610930e21d4d9406cdd)
+- [스터디 7주차 내용 정리](https://jellysong.tistory.com/116) / [MST(Minimum Spanning Tree)](https://www.notion.so/jellysong/6b3673865efd4610930e21d4d9406cdd)
 - [스터디 13주차 Programmers 깊이/너비 우선 탐색(DFS/BFS) 문제풀이](https://jellysong.tistory.com/114) [[코드]](https://github.com/songda515/SwiftAlgorithm/tree/main/그래프탐색)
 
 ### 8. 알고리즘 성능과 효율성
