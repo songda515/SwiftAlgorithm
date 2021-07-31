@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B112FE8026B51D5E00F9B2BA /* 완전탐색_BOJ2798.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112FE7F26B51D5E00F9B2BA /* 완전탐색_BOJ2798.swift */; };
 		B124A82126A2AD0100728CD7 /* 힙_디스크컨트롤러.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124A82026A2AD0100728CD7 /* 힙_디스크컨트롤러.swift */; };
 		B124A82326A2AD1800728CD7 /* 힙_이중우선순위큐.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124A82226A2AD1800728CD7 /* 힙_이중우선순위큐.swift */; };
 		B1404206268EE74900F1A4C5 /* 해시_위장.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1404205268EE74900F1A4C5 /* 해시_위장.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B112FE7F26B51D5E00F9B2BA /* 완전탐색_BOJ2798.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "완전탐색_BOJ2798.swift"; sourceTree = "<group>"; };
 		B124A82026A2AD0100728CD7 /* 힙_디스크컨트롤러.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "힙_디스크컨트롤러.swift"; sourceTree = "<group>"; };
 		B124A82226A2AD1800728CD7 /* 힙_이중우선순위큐.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "힙_이중우선순위큐.swift"; sourceTree = "<group>"; };
 		B1404205268EE74900F1A4C5 /* 해시_위장.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해시_위장.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				B1599B672678B53E00201F3D /* 완전탐색_소수찾기.swift */,
 				B1599B6E2678B6B900201F3D /* 완전탐색_모의고사.swift */,
 				B15A5DE926AA984D0062AF32 /* 완전탐색_BOJ10819.swift */,
+				B112FE7F26B51D5E00F9B2BA /* 완전탐색_BOJ2798.swift */,
 			);
 			name = "완전탐색";
 			path = "완전탐색";
@@ -227,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					B1599B492678A1D600201F3D = {
 						CreatedOnToolsVersion = 12.4;
@@ -273,6 +276,7 @@
 				B1599B5C2678A2E500201F3D /* 스택큐_다리를지나는트럭.swift in Sources */,
 				B124A82326A2AD1800728CD7 /* 힙_이중우선순위큐.swift in Sources */,
 				B14CA1AA26A56E8900AEAE2C /* 그래프탐색_여행경로.swift in Sources */,
+				B112FE8026B51D5E00F9B2BA /* 완전탐색_BOJ2798.swift in Sources */,
 				B150765D26A842EE009F8479 /* 그래프탐색_타겟넘버.swift in Sources */,
 				B17CD11E26847139005A6614 /* 정렬_K번째수.swift in Sources */,
 				B1B1F2B826AE98B4002A64C0 /* 그래프_순위.swift in Sources */,
@@ -404,6 +408,7 @@
 		B1599B522678A1D600201F3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CS3BNMZA76;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -415,6 +420,7 @@
 		B1599B532678A1D600201F3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CS3BNMZA76;
 				ENABLE_HARDENED_RUNTIME = YES;
